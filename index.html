@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 모바일 사이트 뷰포트/모바일너비/100%/사용자확대가능/최소화면/최대화면사이즈-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0">
+        <!--css연결-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/common.js"></script>
+
+        <title>뉴마커스</title>
+    </head>
+    <body>
+        <header>
+            <section class="site-top">
+
+                <!--왼쪽 메뉴-->
+                <div class="left">
+                    <a href="#"><!--링크 대신 대체로 넣은 것-->
+                        <i class="xi-bars"></i><!--아이콘은 클래스로 넣어줄것-->
+                    </a>
+                    <a href="#">
+                        <i class="xi-search"></i>
+                    </a>
+                </div>
+
+                <!--가운데 로고-->
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="로고"><!--메인페이지 이동경로-->
+                </a>
+
+                <!--오른쪽 메뉴-->
+                <div class="right">
+                    <a href="#">
+                        <i class="xi-user-o"></i>
+                    </a>
+                    <a href="#">
+                        <i class="xi-cart-o"></i>
+                    </a>
+                </div>
+            </section>
+            <nav>
+                <a href="#">제품구매</a>
+                <a href="#">질문과답변</a>
+                <a href="#">구매후기</a>
+                <a href="#">고객센터</a>
+            </nav>
+        </header>
+        <main>
+            <section class="main-banner">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/main_banner1.jpg" alt="메인베너1">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/main_banner2.jpg" alt="메인베너2">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/main_banner3.jpg" alt="메인베너3">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/main_banner4.jpg" alt="메인베너4">
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+            </section>
+            <section class="sub-menus">
+                <a href="#">에어간판</a>
+                <a href="#">실사출력</a>
+                <a href="#">현수막&배너</a>
+                <a href="#">인쇄홍보물</a>
+                <a href="#">대량발주건</a>
+                <a href="#">기획상품</a>
+                <a href="#">특가상품</a>
+                <a href="#">마켓</a>
+                <a href="#">개인결제</a>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
+<!--
+    상단 제목(ex.네이버): title 태그 사용
+    xeicon사이트에서 icon스타일 사용     ---- 클래스명만 적용시켜주면 사이트 안에 아이콘이 불러와진다
+    body태그 안에는 홈페이지 상단 중간 하단 위치별로 구현
+    헤더태그에는 로고와 검색 등 
+
+    기본으로 body에는 여백이 존재하는데 스타일을 망침! 
+    <css쪽 가서> margin, padding없애기
+    a태그 기본으로 생기는 밑줄 없애기 
+    공통적으로 글자색 바꿔주기
+    input태그 text 입력란, 이미지태그 검정색 경계선 제거하기
+    구글 폰트 들어가서 폰트 찾아 공통적인 글꼴 적용, 특정 폰트 지정
+-->
+<!--
+    상단로고 이미지 저장 후 불러오기, 헤더 배너들 만들기
+    헤더는 상단 로고와, nav?메뉴가 있다
+    div에 상단 로고 및 메뉴 아이콘 넣기 (i태그), 이동경로(a태그) 만들기
+
+    css에서 헤더영역 아이콘 제 위치에 배치 해주기 / 상하 가운데 정렬까지
+    body 너비 html,body배경색 조정
+    padding 으로 헤더 로고 및 아이콘들 좌우쪽 여백 좀 주기
+    헤더 밑 구분선
+
+    navigaor에 메뉴 경로 지정
+
+    css상메뉴 높이 설정해주고, flex로 여백 균등하게 4등분 시켜주고 정렬
+-->
+<!--
+    이벤트 배너
+    사진 저장, swiper.js -> 스크롤 데모들
+    js폴더 연동
+    swiper navigator코어 들어가서 div 속성들 복붙, swiperjs 소스도 복붙
+    경로에 저장된 배너 넣어주기
+
+    swiper docs get started -> Use Swiper from CDN -> link 태그 복붙
+
+    잘라내고 넣고 잘라내고 넣고....
+    -> 롤링배너 완성 ^.^......
+
+    데모에 swiper pagemation 복붙  --- 이부분 하면 배너 밑에 몇페이지인지 표시해주는거 나옴
+    <div class="swiper-pagination"></div> 이거추가하고
+    
+    pagination: {
+        el: ".swiper-pagination",
+      },이거 js코드에 추가
+
+    css메인 배너 영역 스타일 꽉차게 바꾸기
+
+    메인 배너 부분 sub memus 메뉴 section 추가
+
+    css내부함수 : calc함수 계산에씀 calc(100% / 3) 이렇게 하면 정확하게 3등분 된다.
+    서브메뉴들 영역정해주기
+
+-->
